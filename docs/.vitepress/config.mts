@@ -34,7 +34,7 @@ export default defineConfig({
             ]
           },
           { 
-            text: "Introducing Providence", 
+            text: "Providence", 
             link: "/introducing-providence",
             collapsed: true,
             items: [
@@ -42,13 +42,13 @@ export default defineConfig({
             ]
           },
           { 
-            text: "Building Providence", 
+            text: "Architecture", 
             link: "/building-providence",
             collapsed: true,
             items: [
-              { text: "Architecture", link: "/building-providence#architecture" },
-              { text: "Backend", link: "/building-providence#backend-architecture" },
-              { text: "Frontend", link: "/building-providence#frontend-architecture" },
+              { text: "Agent", link: "/building-providence#agent-sending-session-data-to-providence" },
+              { text: "Backend", link: "/building-providence#providence-backend-architecture" },
+              { text: "Dashboard", link: "/building-providence#providence-s-dashboard" },
             ]
         },
         { 
@@ -56,14 +56,11 @@ export default defineConfig({
           link: "/design-decisions-and-challenges",
           collapsed: true,
           items: [
-          { 
-            text: "Design Decisions",
-            link: "/design-decisions-and-challenges#design-decisions"
-          },
-          { 
-            text: "Challenges",
-            link: "/design-decisions-and-challenges#challenges"
-          }]
+          { text: "Precomputing Summaries", link: "/design-decisions-and-challenges#precomputing-summaries"},
+          { text: "Increasing Context for AI", link: "/design-decisions-and-challenges#increasing-context-for-ai"},
+          { text: "Detecting Session Inactivity", link: "/design-decisions-and-challenges#detecting-session-inactivity-with-providence-s-worker"},
+          { text: "RAG Chatbot", link: "/design-decisions-and-challenges#retrieval-augmented-generation-chatbot"},
+          ]
          },
         { 
           text: "Future Work", 

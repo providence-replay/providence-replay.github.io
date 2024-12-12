@@ -3,8 +3,8 @@ prev:
   text: 'Background'
   link: '/background'
 next:
-  text: 'Design Decisions and Challenges'
-  link: '/design-decisions-and-challenges'
+  text: 'Architecture'
+  link: '/building-providence'
 ---
 
 # Core Features of Providence
