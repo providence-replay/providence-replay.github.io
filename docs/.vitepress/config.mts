@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   appearance: 'force-auto',
   title: "Providence",
-  description: "Providence is an open source session replay tool leveraging next generation AI tools.",
+  description: "Providence: An Open-Source Session Replay Tool with AI Integration",
   themeConfig: {
     outline: {
       level: [2, 4],
@@ -28,9 +28,9 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: "Introduction", link: "/background#introduction" },
-              { text: "Observability", link: "/background#observability" },
-              { text: "Session Replay", link: "/background#session-replay" },
-              { text: "Existing Solutions", link: "/background#existing-solutions" },
+              { text: "Observability", link: "/background#observability-metrics-for-applications" },
+              { text: "Session Replay", link: "/background#session-replay-frontend-observability" },
+              { text: "Existing Solutions", link: "/background#providence-vs-existing-session-replay-tools" },
             ]
           },
           { 
@@ -38,8 +38,7 @@ export default defineConfig({
             link: "/introducing-providence",
             collapsed: true,
             items: [
-              { text: "Overview", link: "/introducing-providence#overview" },
-              { text: "Features", link: "/introducing-providence#features" },
+              { text: "Features", link: "/introducing-providence#core-features-of-providence" },
             ]
           },
           { 
