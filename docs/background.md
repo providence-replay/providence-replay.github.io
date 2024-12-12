@@ -23,7 +23,7 @@ In backend systems, telemetry metrics are the foundation of observability. Telem
 
 Session replay provides a powerful complement to the backend telemetry data by observing the frontend behavior of an application. Watching an application in use is a direct approach to understanding what actions lead to user confusion or errors. With session replay, developers and product designers can watch a reconstruction of the DOM states, simulated as a video of the application in use. 
 
-The product designer can then see what the user sees as they interact with an application. The video-like replay will show changes in the DOM, mouse actions, and scrolls. Often network requests and error notifications are added to session data to build a more complete picture of the user experience. (See ‘using rrweb’ (link to section) for details on how session replay works.)
+The product designer can then see what the user sees as they interact with an application. The video-like replay will show changes in the DOM, mouse actions, and scrolls. Often network requests and error notifications are added to session data to build a more complete picture of the user experience. (See [using rrweb](builiding-providence.md###using-rrweb) for details on how session replay works.)
 
 #### Benefits of Session Replay
 
