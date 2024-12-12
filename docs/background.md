@@ -1,7 +1,7 @@
 ---
 prev: false
 next:
-  text: 'Introducing Providence?'
+  text: 'Core Features of Providence'
   link: '/introducing-providence'
 ---
 
@@ -32,7 +32,7 @@ Common use cases for session replay include improving user experience, diagnosin
 Direct observation of a product in use, allows teams to see both successful interactions and friction points. Without session replay, someone looking to understand how the application is being used could use surveys or have conversations with their customers. Valuable feedback can be gained through this method but it relies on customers remembering what they did, describing it accurately, and responding to the survey in the first place. While submitted complaints from users might surface glaring issues, feedback for smoothly functioning areas is less common. Session replay can enable data-driven product decisions.
 
 <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px; margin-top: 20px;">
-  <img src='/logo.png' alt='Benefits'/>
+  <img src='/benefits.png' alt='Benefits'/>
 </div>
 
 #### Challenges of Traditional Session Replay
@@ -48,5 +48,5 @@ There are many existing session replay solutions on the market today. FullStory 
 Alternatively, to self-host session data, you could use the rrweb library to build your own capture and replay application. While this is an option, configuring and building custom tooling can take up significant engineering resources. In contrast, Providence is a self-hosted, open-source session replay tool. Providence offers fewer debugging features while focusing on providing descriptions of how users interact with an instrumented application.
 
 <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px; margin-top: 20px;">
-  <img src='/logo.png' alt='Existing Solutions'/>
+  <img src='/existing_solutions.png' alt='Existing Solutions'/>
 </div>

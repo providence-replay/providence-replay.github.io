@@ -7,38 +7,52 @@ next:
   link: '/design-decisions-and-challenges'
 ---
 
+# Core Features of Providence
 
-# Overview
+Providence provides insights into how users interact with an application through integrated AI to analyze session data.
 
-Providence is a session replay tool that integrates AI to provide insights into user application interactions in a way that reduces the need to watch session replays. Key features include AI-generated summaries of each session, replay viewing (for when direct viewing is necessary), multi-session summarization, and a RAG chatbot that answers questions across all stored sessions.
+## AI-Driven Single Session Summaries
 
-## Features
+As mentioned, watching session replays is time-consuming. The actual number of sessions generated will depend on the popularity of the instrumented application. Eventually, it becomes impractical to view every replay, let alone derive meaningful insights from all of them. Providence begins to address this with AI-generated single-session analysis.
 
-### Replaying Sessions
+<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px; margin-top: 20px;">
+  <img src='/logo.png' alt='Single Session screen'/>
+</div>
 
-While it is impractical to watch all replays, certain summaries are bound to prompt developers to watch specific sessions. Providence includes a session replayer for these situations. In the single-session view, sessions can be sorted and filtered chronologically.
+A user of Providence will interact with collected sessions through a dashboard. From the single-session tab, a developer clicking a session card from the left sidebar will reveal both the session replay viewer for the specified session and the summary, which was generated when the session finished recording. Providence detects errors, console logs, network requests, and user frustrations like dead clicks, rage clicks, and mouse frustration shakes. The raw session data is preprocessed, to add metadata and increase its semantic meaning, before the AI analysis occurs. The generated response aims to communicate insights about the user's interaction in a paragraph without needing to replay the session.
 
-For example, suppose a single session summary indicates a negative experience due to an error occurring 17 seconds into the session. In that case, the replay can be opened to see what the user was seeing leading up to and at the time of the error. The targeted replay is purposeful and time-efficient.
+<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px; margin-top: 20px;">
+  <img src='/single_session_summary.png' alt='Single Session Graphic'/>
+</div>
 
-### Single Session Summary
+## Replaying Sessions
 
-A downside of traditional session replay software is the time required to watch the sessions. The actual number of sessions generated will depend on the popularity of the instrumented application. Eventually, it becomes impractical to view each one let alone derive meaningful insights. Providence begins to address this with AI-generated single-session analysis.
+While it is impractical to watch all replays, certain summaries are bound to prompt developers to watch specific sessions. For example, suppose a single-session summary indicates a negative experience due to an error occurring 17 seconds into the session. Providence includes a session replayer for these situations where targeted and purposeful replays are desired.
 
-From the single-session dashboard, a developer clicking a session card from the left sidebar will reveal both the session replay viewer for the specified session and the summary, which was generated when the session finished recording. Providence detects errors, console logs, network requests, and user frustrations like dead clicks, rage clicks, and mouse frustration shakes. The session data is preprocessed before the AI analysis occurs. The response generated aims to communicate insights about the user's interaction in a paragraph without needing to play back the session.
+## Multi-Session AI Summaries
 
-### Multi Session Summary
+Providence’s multi-session summary aggregates insights across multiple sessions, to identify trends and outliers without extensive replay viewing.
 
-Providence’s multi-session summary aggregates insights across multiple sessions, to identify trends and outliers without extensive replay viewing. 
+<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px; margin-top: 20px;">
+  <img src='/multi_session_summary.png' alt='Multi Session Graphic'/>
+</div>
 
-[ image of a multi-summary - similar to above]
+This feature is accessed via the multi-session tab. The Providence user selects up to 10 sessions from the sidebar cards. The infrastructure could handle considerably more sessions, however, it was our experience that ten sessions at a time were easier to navigate. 
 
-This feature is accessed via the multi-session tab. Users select up to 10 sessions [fw - link to future work] from the sidebar cards. Clicking “Summarize Recordings” triggers an API call to OpenAI to analyze and generate a summary highlighting common patterns and anomalies across the selected data.
+<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px; margin-top: 20px;">
+  <img src='/logo.png' alt='Multi Session Screenshot'/>
+</div>
 
-### RAG Chatbot
+## RAG Chatbot: AI-Powered Insights from Session Data
 
-Providence’s retrieval-augmented generation (RAG) chatbot offers a conversational interface to answer questions about user interactions. It combines session analysis with a vector database to provide meaningful insights quickly. (A deep dive into how this works is found in the section ‘Providence’s RAG chatbot’ (link)).
+If you have a general question about user behavior, for example, if you are trying to identify if users are getting frustrated while using your application, one approach would be to open up the single-session summaries and start reading each summary to look for evidence. This would be tedious.
 
-In the chatbot tab, developers type in questions and receive detailed insights answered from a knowledge base of data generated by use of their application. While the chatbot excels at providing general insights about user behavior, it currently does a poor job of answering questions about precise metrics. For example, ask it “How many sessions were recorded yesterday?” and it could return an error, a hallucinated number, or the correct answer. This is a clear area for future improvements to Providence.
+Providence’s retrieval-augmented generation (RAG) chatbot offers a conversational interface to answer questions about user sessions. It combines session analysis with a vector database to provide contextually relevant insights quickly.
 
-[ video of chatbot in use - demonstrating a couple of good questions and answers ]
+In the chatbot tab, users type in questions and receive detailed insights answered from a knowledge base of data generated by their user sessions.
+
+<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px; margin-top: 20px;">
+  <img src='/logo.png' alt='Rag Screen'/>
+</div>
+
 
