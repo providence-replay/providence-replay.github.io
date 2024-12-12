@@ -103,10 +103,10 @@ This chain of events ensures that session data is properly processed, analyzed, 
 To load the dashboard, an SQL query in AWS RDS (Relational Database Service) fetches metadata for all inactive sessions. These are displayed in a list of cards. Selecting a session retrieves its summary and file name, enabling session replay functionality by fetching the corresponding raw rrweb data from S3. The rrweb library powers the replay functionality, allowing sessions to be reviewed as a video-like simulation directly from the captured JSON.
 
 ### Multi-Session Summaries
-Sessions are selected by clicking on them in the sidebar. The texts of the selected session summaries are fetched from PostgreSQL and sent to OpenAI via an API call for multi-session analysis. The resulting insights sent in the response are displayed in the dashboard.
+Sessions are selected by clicking on them in the sidebar([see above images](introducing-providence.md#multi-session-ai-summaries)). The texts of the selected session summaries are fetched from PostgreSQL and sent to OpenAI via an API call for multi-session analysis. The resulting insights sent in the response are displayed in the dashboard.
 
 ### RAG Chatbot
-The chatbot uses embeddings stored in Qdrant for vector-based searches. When a user asks a question, it is embedded using OpenAI’s text-embedding-3-small model. A nearest-neighbor search identifies relevant summaries, which are passed as context to OpenAI to generate a response. The result is then displayed in the dashboard.
+The chatbot uses embeddings stored in Qdrant for vector-based searches. When a user asks a question, it is embedded using OpenAI’s text-embedding-3-small model. A nearest-neighbor search identifies relevant summaries, which are passed as context to OpenAI to generate a response. The result is then displayed in the dashboard ([see above images](introducing-providence.md#rag-chatbot-ai-powered-insights-from-session-data)).
 
 #### LLM Overview
 Providence’s decision to use single-session summaries for embedding and storage in the vector database is grounded in the principles of how Large Language Models and Retrieval-Augmented Generation work.
