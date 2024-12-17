@@ -40,7 +40,7 @@ Providence’s multi-session summary aggregates insights across multiple session
 This feature is accessed via the multi-session tab. The Providence user selects up to 10 sessions from the sidebar cards. The infrastructure could handle considerably more sessions, however, it was our experience that ten sessions at a time were easier to navigate. 
 
 <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px; margin-top: 20px;">
-  <img src='/multi_session_summary_screenshot.png' alt='Multi Session Screenshot'/>
+  <img src='/multi_summary_screenshot.png' alt='Multi Session Screenshot'/>
 </div>
 
 ## RAG Chatbot: AI-Powered Insights from Session Data
