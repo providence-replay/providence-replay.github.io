@@ -22,12 +22,12 @@ features:
     link: /introducing-providence#replaying-sessions
   - title: Single Session Summary
     details: Gain a quick understanding of user interactions from any session, without replaying it.
-    link: /introducing-providence#single-session-summary
+    link: /introducing-providence#ai-driven-single-session-summaries
   - title: Multi-Session Summary
     details: Identify patterns and outliers across sessions to gain actionable insights with just a couple of clicks.
-    link: /introducing-providence#multi-session-summary
+    link: /introducing-providence#multi-session-ai-summaries
   - title: Rag Chatbot
     details: Analyze user behavior conversationally with a chatbot that provides data-driven answers.
-    link: /introducing-providence#rag-chatbot
+    link: /introducing-providence#rag-chatbot-ai-powered-insights-from-session-data
 ---
 
